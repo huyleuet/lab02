@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Lab2</string>
-</resources>
+    <string name="app_name">Dating App</string>
+    <string name="action_log_in">Log in</string>
+    <string name="action_sign_up">Sign Up</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_matches">Matches</string>
+    <string name="title_messages">Messages</string>
+    <string name="title_account">Account</string>
+    </resources>
