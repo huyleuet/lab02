@@ -7,7 +7,7 @@
     android:background="@drawable/gradient_background"
     tools:context=".StartActivity">
 
-    <TextView
+    <com.example.lab2.CustomFontTextView
         android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
