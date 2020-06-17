@@ -1,12 +1,9 @@
 package com.example.lab2;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatTextView;
 
 public class CustomFontTextView extends AppCompatTextView {
@@ -26,8 +23,7 @@ public class CustomFontTextView extends AppCompatTextView {
     }
 
     private void applyCustomFont(Context context) {
-//        Typeface tf = FontCache.get("font/opensans_extrabolditalic.ttf", context);
-        Typeface tf = Typeface.create("@font/opensans",Typeface.NORMAL);
+        Typeface tf = Typeface.create("fonts/opensans", Typeface.BOLD);
         setTypeface(tf);
     }
 }

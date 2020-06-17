@@ -4,32 +4,38 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.lab2.R;
+import com.example.lab2.model.Person;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MatchesFragment extends Fragment {
-
+    private MatchesAdapter matchesAdapter;
     private MatchesViewModel matchesViewModel;
-
+    private RecyclerView matchesRv;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        matchesViewModel =
-                ViewModelProviders.of(this).get(MatchesViewModel.class);
         View root = inflater.inflate(R.layout.fragment_matches, container, false);
-        final TextView textView = root.findViewById(R.id.text_matches);
-        matchesViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        List<Person> personList = new ArrayList<>();
+        personList.add(new Person("Huy", "Active now"));
+        personList.add(new Person("Huy", "Active now"));
+        personList.add(new Person("Huy", "Active now"));
+        personList.add(new Person("Huy", "Active now"));
+        personList.add(new Person("Huy", "Last seen 22 apr"));
+        personList.add(new Person("Huy", "Active now"));
+        matchesRv = root.findViewById(R.id.matchesRv);
+        matchesRv.setHasFixedSize(true);
+        matchesRv.setLayoutManager(new GridLayoutManager(root.getContext(),2));
+        matchesAdapter = new MatchesAdapter(personList);
+        matchesRv.setAdapter(matchesAdapter);
         return root;
     }
+
 }

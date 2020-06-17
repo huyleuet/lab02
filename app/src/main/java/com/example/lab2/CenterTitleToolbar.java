@@ -49,6 +49,8 @@ public class CenterTitleToolbar extends Toolbar {
             titleTextView.setText(title);
         }
     }
+
+
     private void addSystemView(View v) {
         final ViewGroup.LayoutParams vlp = v.getLayoutParams();
         final LayoutParams lp;
