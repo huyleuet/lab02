@@ -4,11 +4,16 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        app:font="@font/opensans_extrabolditalic"
+        android:font="@font/opensans_regular"
         />
-
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="700"
+        android:font="@font/opensans_lightitalic"
+        />
     <font
         android:fontStyle="italic"
         android:fontWeight="400"
         android:font="@font/opensans_italic" />
+
 </font-family>

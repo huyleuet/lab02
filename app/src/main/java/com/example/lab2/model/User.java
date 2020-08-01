@@ -1,10 +1,10 @@
 package com.example.lab2.model;
 
-public class Person {
+public class User {
     private String name;
     private String onlineStatus;
 
-    public Person(String name, String onlineStatus) {
+    public User(String name, String onlineStatus) {
         this.name = name;
         this.onlineStatus = onlineStatus;
     }

@@ -12,7 +12,6 @@ public class MatchesViewModel extends ViewModel {
         mText = new MutableLiveData<>();
         mText.setValue("This is messages fragment");
     }
-
     public LiveData<String> getText() {
         return mText;
     }
